@@ -1,0 +1,461 @@
+.onst-registration-form {
+    width: 100%;
+    position: relative;
+    padding: 50px 0px;
+}
+.onst-registration-form .onst-registration-form-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 20px;
+    margin: auto;
+}
+.onst-registration-form h2.title {
+    margin: 0;
+	text-align:center;
+	font-size:26px;
+}
+.onst-registration-form-container-box {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+}
+.onst-registration-form-container-box form {
+    position: relative;
+    width: 100%;
+	text-align:center;
+    display: block !important;
+}
+.onst-registration-form-container-box form .onst-field {
+    position: relative;
+    width: 100%;
+	order:1;
+}
+.onst-registration-form-container-box form .onst-field label {
+    display: none;
+}
+.onst-registration-form-container-box form .onst-field input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 0;
+    border: 1px solid #a3a3a3;
+}
+.onst-registration-form button ,
+.onst-registration-form .button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+	line-height:1.6em;
+    min-height: auto;
+}
+.onst-registration-form-container-box form .onst-backtologin {
+    width: 100%;
+    position: relative;
+    padding-top: 8px;
+}
+.onst-registration-form-container-box form .onst-backtologin a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+.onst-registration-form-container-box form .onst-field .onst-warning {
+    display: none;
+    font-size: 14px;
+    text-align: left;
+    color: #df0707;
+}
+.onst-registration-form-container-box form .onst-field .onst-warning.onstactive {
+	display: block;
+}
+.onst-register-action span,
+.onst-whole-register-action span,
+.onst-custom-form-submit span,
+.onst-newsletter-action span {
+    font-size: 24px;
+    display: none !important;
+    line-height: 1em;
+    margin-left: 5px;
+	animation: onstloading 1s linear infinite;
+}
+.onst-register-action.onstloading,
+.onst-whole-register-action.onstloading,
+.onst-custom-form-submit.onstloading,
+.onst-custom-form-submit.uploading-file,
+.onst-newsletter-action.onstloading {
+    opacity: 0.6;
+    cursor: progress;
+}
+.onst-register-action.onstloading span,
+.onst-whole-register-action.onstloading span,
+.onst-custom-form-submit.onstloading span,
+.onst-newsletter-action.onstloading span{
+	display:block !important;
+}
+.onst-registration-form-container-box form .onst-success-message {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.2em;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ddffd9;
+    color: #0a5801;
+    border: 1px solid;
+	display:none;
+}
+.onst-registration-form-container-box form .onst-success-message.onstactive {
+	display:block;
+}
+.onst-custom-form-box .onst-backtologin.top-login-link {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-title {
+    text-align: left;
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+    margin-bottom: -10px;
+}
+@keyframes onstloading {
+  0% { 
+    transform: rotate(0); 
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+.onst-registration-form .onst-registration-form-container p.subtitle {
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+	font-size:16px;
+}
+.onst-registration-form .onst-registration-form-container.onst-big-form {
+    max-width: 700px;
+}
+.onst-registration-form-container-box form .onst-field-group {
+    display: flex;
+    gap: 20px;
+}
+.onst-registration-form-container-box form .onst-field select {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 0;
+    border: 1px solid #a3a3a3;
+    height: auto;
+    margin:0;
+}
+.onst-registration-form-container-box form.onst-show-labels .onst-field label {
+    display: block;
+    text-align: left;
+    line-height: 1.2em;
+    padding-bottom: 8px;
+}
+[dir="rtl"] .onst-registration-form-container-box form.onst-show-labels .onst-field label {
+    text-align: right;
+}
+.onst-registration-form-container-box form .onst-field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 0;
+    border: 1px solid #a3a3a3;
+}
+.onst-registration-form-container-box form .onst-field input,
+.onst-registration-form-container-box form .onst-field select,
+.onst-registration-form-container-box form .onst-field textarea{
+	font-family: inherit;
+}
+.onst-registration-form-container-box .onst-register-form-fields {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+	padding-bottom:20px;
+}
+.onst-registration-form-container-box .onst-register-form-fields .onst-field-group-box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    order:1;
+}
+.onst-registration-form-container-box .onst-register-form-fields .onst-field.onst-size-half {
+    width: 100%;
+    max-width: calc( 50% - 10px );
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-1 {
+    order: 1;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-2 {
+    order: 2;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-3 {
+    order:3;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-4 {
+    order:4;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-5 {
+    order: 5;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-6 {
+    order: 6;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-7 {
+    order: 7;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-8 {
+    order: 8;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-9 {
+    order: 9;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-10 {
+    order: 10;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-11 {
+    order: 11;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-12 {
+    order: 12;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-13 {
+    order: 13;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-14 {
+    order: 14;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-16 {
+    order: 16;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-17 {
+    order: 17;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-18 {
+    order: 18;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-19 {
+    order: 19;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-20 {
+    order: 20;
+}
+.onst-registration-form-container-box form .onst-register-form-fields .onst-order-21 {
+    order: 21;
+}
+.onst-custom-form-box-loader {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.onst-custom-form-box-loader .onst-loading-icon {
+    border: 5px solid #edecec;
+    border-top: 5px solid #3c3c3c;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: onstspin 2s linear infinite;
+    display: inline-block;
+}
+ @keyframes onstspin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.onst-custom-form-box {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+}
+.onst-registration-form-container-box form .onst-field input[type="radio"],
+.onst-registration-form-container-box form .onst-field input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+    margin-right: 9px;
+    display: inline-block;
+    line-height: 1em;
+    height: auto;
+    min-height: fit-content;
+    -webkit-appearance:auto;
+    -moz-appearance:inherit;
+    position:relative;
+    appearance:auto;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-roptions p {
+    margin: 0;
+    text-align: left;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-roptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-roptions label {
+    padding: 0;
+    cursor: pointer;
+}
+.onst-custom-form-box .onst-registration-form-container-box {
+    padding-top: 0;
+}
+.onst-password-field {
+    position: relative;
+    width: 100%;
+}
+.onst-password-field span.password-view,
+.onst-password-field span.password-view-js {
+    font-size:0;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.onst-password-field span.password-view-js:before,
+.onst-password-field span.password-view:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    opacity: 0.7;
+}
+.onst-registration-form-container-box form .onst-field.onst-upload-field p {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+}
+.onst-field-upload-box {
+    position: relative;
+    width: 100%;
+}
+.onst-field-upload-box .onst-file-input {
+    position: relative;
+    width: 100%;
+}
+.onst-field-upload-box .onst-file-input input[type="file"] {
+    display: none;
+}
+.onst-registration-form-container-box form.onst-show-labels .onst-field .onst-field-upload-box .onst-file-input label {
+    padding:12px 15px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    overflow: hidden;
+}
+.onst-field-upload-box .onst-file-input label {
+    border-radius: 0;
+    border: 1px solid #a3a3a3;
+    font-size: 14px;
+    cursor: pointer;
+}
+.onst-field-upload-box .onst-file-input label .onst-upload-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+}
+.onst-field-upload-box .onst-file-input label span.onst-selected-file-name {
+    font-style: italic;
+    font-weight: 600;
+}
+.onst-registration-form-container-box form.onst-show-labels .onst-field .onst-field-upload-box .onst-file-input label div {
+    display: flex;
+    gap: 5px;
+    white-space: nowrap;
+    width: 100%;
+    max-width: calc(100% - 21px);
+    overflow: hidden;
+}
+.onst-field-upload-box .onst-file-input div.upload-file-loader {
+    position: absolute;
+    top: 100%;
+    height: 4px;
+    background-color: #eee;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    opacity:0;
+    visibility: hidden;
+}
+.onst-field-upload-box .onst-file-input div.upload-file-loader.onstactive{
+    opacity:1;
+    visibility: visible;
+}
+.onst-field-upload-box .onst-file-input div.upload-file-loader .upload-loader-progress {
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    background-color: #878787;
+    position: absolute;
+    left: 0;
+}
+@media only screen and (max-width: 600px) {
+  .onst-registration-form-container-box form .onst-field-group{
+	gap: 0;
+    flex-wrap: wrap;
+  }
+  .onst-registration-form-container-box .onst-register-form-fields .onst-field.onst-size-half{
+	 max-width:100%; 
+  }
+}
+.onst-registration-form-container-box form .onst-field.hidden-onst{
+    display: none !important;
+}
+.onst-registration-form-container-box form .onst-field .descriptionbox {
+    text-align: left;
+}
+.onst-registration-form-error-box p {
+    text-align: center;
+    color: #df0707;
+}
+
+.onst-registration-form-container-box form .recaptcha-box {
+    display: none;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.onst-registration-form-container-box form .recaptcha-box.checking {
+    display: flex;
+}
+
+.onst-registration-form-container-box form.onst-custom-form .onst-field,
+.onst-registration-form-container-box form.onst-custom-form .final-step,
+.onst-registration-form-container-box .onst-register-form-fields .onst-field-group-box{
+    display: none;
+}
+
+.onst-registration-form-container-box form.onst-custom-form .onst-field.step-active,
+.onst-registration-form-container-box form.onst-custom-form .final-step.step-active{ 
+    display: block;
+}
+.onst-registration-form-container-box .onst-register-form-fields .onst-field-group-box.step-active{
+    display: flex;
+}
+a.onst-custom-form-prev-step {
+    text-decoration: underline;
+    color: inherit;
+}
+.onst-registration-form-container-box form .onst-field.text-align-left {
+    text-align: left;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-title.group-field-title {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.onst-registration-form-container-box form .onst-field .onst-field-title.group-field-title a.remove-group-title {
+    color: inherit;
+    font-size: 14px;
+}
