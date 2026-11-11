@@ -10,6 +10,9 @@ const priceFormat = new Intl.NumberFormat("en-US", {
 /** 2250 -> "Tk 2,250.00" */
 export const formatPrice = (amount: number) => `Tk ${priceFormat.format(amount)}`;
 
+/** 190 -> "৳190.00" (checkout uses the taka sign). */
+export const formatTaka = (amount: number) => `৳${priceFormat.format(amount)}`;
+
 const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
 
 /**

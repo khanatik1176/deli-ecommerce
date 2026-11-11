@@ -1,20 +1,15 @@
 "use client";
 
 import { Heart, Search, ShoppingCart, type LucideIcon } from "lucide-react";
+import { useCart } from "@/components/cart/cart-context";
 import type { Product } from "@/data/products";
 
 type Action = {
   label: string;
   icon: LucideIcon;
-  onClick: (product: Product) => void;
+  /** Omit until the feature exists. */
+  onClick?: (product: Product) => void;
 };
-
-// TODO: connect to wishlist / quick-view modal / cart once those exist.
-const actions: Action[] = [
-  { label: "Add to Wishlist", icon: Heart, onClick: () => {} },
-  { label: "Quick View", icon: Search, onClick: () => {} },
-  { label: "Add to cart", icon: ShoppingCart, onClick: () => {} },
-];
 
 /**
  * Hover actions stacked at the top-right of a product image. Place inside a
@@ -28,6 +23,13 @@ export function ProductActions({
   product: Product;
   tabbable?: boolean;
 }) {
+  const { add } = useCart();
+  // TODO: connect wishlist and quick view once those exist.
+  const actions: Action[] = [
+    { label: "Add to Wishlist", icon: Heart },
+    { label: "Quick View", icon: Search },
+    { label: "Add to cart", icon: ShoppingCart, onClick: (p) => add(p) },
+  ];
   return (
     <ul className="absolute right-2.5 top-[18px] flex flex-col gap-3.5">
       {actions.map(({ label, icon: Icon, onClick }, i) => (
@@ -40,10 +42,14 @@ export function ProductActions({
             type="button"
             aria-label={`${label}: ${product.name}`}
             tabIndex={tabbable ? undefined : -1}
-            onClick={() => onClick(product)}
+            onClick={() => onClick?.(product)}
             className="group/action relative flex size-8 items-center justify-center border border-neutral-200 bg-white text-neutral-900 shadow-sm transition hover:border-neutral-950 hover:bg-neutral-950 hover:text-white focus-visible:border-neutral-950 focus-visible:bg-neutral-950 focus-visible:text-white focus-visible:outline-none sm:size-10"
           >
-            <Icon className="size-4 sm:size-5" strokeWidth={1.5} aria-hidden="true" />
+            <Icon
+              className="size-4 sm:size-5"
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
             <span
               aria-hidden="true"
               className="pointer-events-none absolute right-full top-1/2 mr-2.5 -translate-y-1/2 translate-x-1 whitespace-nowrap rounded-sm bg-neutral-950 px-2.5 py-1.5 text-[12px] font-medium leading-none text-white opacity-0 transition duration-200 group-hover/action:translate-x-0 group-hover/action:opacity-100 group-focus-visible/action:translate-x-0 group-focus-visible/action:opacity-100"

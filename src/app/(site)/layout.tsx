@@ -1,0 +1,14 @@
+import type { ReactNode } from "react";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
+
+/** Storefront chrome: full header (with sticky bar) and footer. */
+export default function SiteLayout({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
+}

@@ -5,7 +5,7 @@ const icon = "size-[22px]";
 const socials: { label: string; href: string; svg: ReactNode }[] = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/Delistationerybd",
     svg: (
       <svg
         viewBox="0 0 24 24"
@@ -19,7 +19,7 @@ const socials: { label: string; href: string; svg: ReactNode }[] = [
   },
   {
     label: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/deli_bangladesh",
     svg: (
       <svg
         viewBox="0 0 24 24"

@@ -7,6 +7,8 @@ export type Product = {
   imageAspect?: string;
   /** Lowest price in BDT. */
   price: number;
+  /** Pack size shown in the cart, e.g. "6 Pcs". */
+  pack?: string;
   /** Multiple variants: the price is shown as "From Tk …". */
   hasVariants?: boolean;
 };
@@ -16,6 +18,7 @@ export const products: Product[] = [
   {
     name: "Flickwell Ballpen-0.7mm-BK | Super smooth | Comfortable grip",
     slug: "flickwell-ballpen-0-7mm-bk",
+    pack: "6 Pcs",
     image: "/images/EQ100-BK_1_785x.webp",
     price: 60,
     hasVariants: true,
@@ -110,6 +113,7 @@ export const products: Product[] = [
   {
     name: "Deli Roller Pen-0.5-SF855-BK | 4X more Ink | Smudge-free | Smooth Writing",
     slug: "deli-roller-pen-0-5-sf855-bk",
+    pack: "1 Pcs",
     image: "/images/bs6.webp",
     price: 50,
     hasVariants: true,
